@@ -1,0 +1,361 @@
+@background-color-head: #fff;
+@background-color-body: #ddd;
+@background-color-foot: #34495E;
+
+@content-border-radius: 5px; //Borde por defecto
+@content-padding: 10px; //Padding por defecto en los contenidos
+@content-padding-top-bottom: @content-padding;
+
+// Headings
+@h1: @base-font-size * 2.286; // 32px
+@h2: @base-font-size * 2;     // 28px
+@h3: @base-font-size * 1.715; // 24px
+@h4: @base-font-size * 1.572; // 22px
+@h5: @base-font-size * 1.429; // 20px
+@h6: @base-font-size * 1.286; // 18px
+
+@color: #ffffff;
+@color-link: #3f8ec4;
+
+// Borders
+@border-width: 1px;
+@border-style: solid;
+
+@height-h6: 42px;
+@height: 100px;
+@padding-top: 30px;
+@font-size: 18px;
+.clear{
+    display: block;
+    clear: both;
+}
+@align: left;
+.align(@align) {
+    text-align: @align;
+}
+// Set head style
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+h1, .h1 { font-size: @h1; }
+h2, .h2 { font-size: @h2; }
+h3, .h3 { font-size: @h3; }
+h4, .h4 { font-size: @h4; }
+h5, .h5 { font-size: @h5; }
+h6, .h6 {
+    font-size: @h6;
+    i {
+        &.fui-arrow-right {
+          color: @emerland;
+        }
+    }
+}
+p {
+    font-size: @base-font-size - 1;
+    line-height: 17px;
+    margin: 0;
+}
+small {
+    font-size: @base-font-size * 0.75; // 12px
+}
+a {
+    color: @base;
+}
+.center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    #head {
+        background: #ffffff;
+        max-width: 1440px;
+        margin: 0 auto;
+        height: 131px;
+        #logo {
+            margin-top: 24px;
+            height: 107px;
+            .wrapper {
+                max-width: 960px;
+                margin: 0 auto;
+                .container {
+                    position: relative;
+                    .logo-aula {
+                        a {
+                            height: 77px;
+                            width: 218px;
+                            display: block;
+                            background: url('../img/default/logo-aula.png') no-repeat;
+                        }
+                    }
+                    /*.aula-digital {
+                        text-align: center;
+                        width: 152px;
+                        height: 52px;
+                        p {
+                            font-family: 'Lato', serif;
+                            font-size: 16px;
+                            font-weight: lighter;
+                            color: #e73a3c;
+                            background-color: #f0f0f0;
+                            padding: 5px 0 5px 0;
+                            margin-bottom: 7px;
+                        }
+                        a {
+                            font-family: 'Lato', serif;
+                            font-size: 16px;
+                            font-weight: lighter;
+                            color: #fff;
+                            background-color: #e73a3c;
+                            height: 33px;
+                            width: 152px;
+                            padding: 3px 12px 3px 12px;
+                        }
+                        a:hover {
+                            text-decoration: none;
+                            border: none;
+                            color: #fff;
+                        }
+                    }*/
+                    .aula-digital-header {
+                        text-align: left;
+                        width: 152px;
+                        height: 52px;
+                        .titulo {
+                            font-family: 'Lato', serif;
+                            font-size: 16px;
+                            font-weight: lighter;
+                            color: #424545;
+                            padding: 2px 0 0px 0;
+                            margin-left: 10px;                        
+                        }
+                        a {
+                            font-family: 'Lato', serif;
+                            font-size: 16px;
+                            font-weight: lighter;
+                            color: #fff;
+                            background-color: #e73a3c;
+                            height: 33px;
+                            width: 152px;
+                            padding: 3px 12px 3px 12px;
+                        }
+                        a:hover {
+                            text-decoration: none;
+                            border: none;
+                            color: #fff;
+                        }
+                        .formulario-layout {
+                            background-color: #fff;
+                            border-radius: 5px;
+                            border: 3px solid #0079bc;
+                            box-shadow: 1px 1px 1px #ccc;
+                            margin: 0 auto;
+                            width: 382px;
+                            height: 100px;
+                            .modal-body {
+                                float: left;
+                                padding: 3px 25px 5px;
+                                .form-group {
+                                    margin-bottom: 5px;
+                                }
+                                input {
+                                    width: 190px;
+                                    height: 15px;
+                                    border-radius: 5px;
+                                    color: #424545;
+                                    text-transform: uppercase;
+                                    background-color: #e4e4e4;
+                                }
+                                input::-webkit-input-placeholder {
+                                    color: #424545;
+                                }
+                                .opciones {
+                                    margin: 0 auto;
+                                    width: 193px;
+                                    text-align: center;
+                                    color: #2a5ca7;
+                                    margin-top: -3px;
+                                    .pregunta {
+                                        font-family: 'Lato', sans-serif;
+                                        color: #555;
+                                        float: left;
+                                        font-size: 11px;
+                                    }
+                                    .registrate {
+                                        color: #e73a3c !important;
+                                        font-family: 'Lato', sans-serif !important;
+                                        background-color: transparent !important;
+                                        font-size: 12px !important;
+                                        font-weight: bold;
+                                        text-decoration: underline;
+                                        
+                                    }
+                                }
+                            }
+                            .contacto {
+                                text-align: center;
+                                color: #00253f;
+                                i {
+                                    color: #cc0000;
+                                }
+                            }
+                            .enviar {
+                                float: left;
+                                background-color: #3ea045;
+                                border: 0px;
+                                text-transform: uppercase;
+                                color: #fff;
+                                font-family: 'Lato', sans-serif;
+                                border-radius: 5px;
+                                width: 110px;
+                                height: 32px;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .menu-principal {
+            background-color: #e4e4e4;
+            .menu {
+                height: 43px;
+                width: 653px;
+                margin: 0 auto ;
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    padding-top: 16px;
+                    li {
+                        float: left;
+                        margin-right: 175px;
+                        line-height: 11px;
+                        a {
+                            text-transform: uppercase;
+                            font-weight: lighter;
+                            color: #424545;
+                            font-size: 17px;
+                            span {
+                                display: block;
+                                clear: both;
+                                font-size: 12px;
+                                color: #0079bc;
+                                text-transform: none;
+                                font-weight: normal;
+                            }
+                        }
+                        a:hover {
+                            color: #0079bc;
+                            border-bottom: 4px solid #0079bc;
+                            text-decoration: none;
+                            font-weight: bold;
+                        }
+                        &.active {
+                            a {
+                                border-bottom: 4px solid #0079bc;
+                                color: #0079bc;
+                                font-weight: bold;
+                                span {
+                                    color: #949494;
+                                }   
+                            }
+                        }
+                    }           
+                }
+                .menu-contacto {
+                    width: 280px;
+                    margin-left: 774px;
+                    padding-top: 9px;
+                    background-color: rgba(255, 255, 255, .65);
+                    li {
+                        width: 270px;
+                        height: 27px;
+                        margin-left: 8px;
+                        font-weight: bold;
+                        font-family: 'Lato', serif;
+                        font-size: 15px;
+                        color: #00253f;
+                        text-decoration: none;
+                        i {
+                            color: #e73a3c;
+                            font-size: 22px;
+                            margin-right: 5px;
+                        }
+                        a {
+                            text-transform: none;
+                            float: right;
+                            margin-right: 21px;
+                            font-weight: bold;
+                            font-family: 'Lato', serif;
+                            font-size: 15px;
+                            color: #00253f;
+                            padding-left: 0px;
+                            z-index: 999;
+                            &.telefono {
+                                margin-right: 50px;
+                            }
+                            &:hover {
+                                border: 0;
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .span3 {
+            .align(right);
+        }
+    }
+    #body {
+        overflow: hidden;
+    }
+    .content-padding {
+        overflow: hidden;
+        padding: @content-padding;
+    }
+    #foot {
+        .bottom-menu-inverse {
+            background-color: #3E3E3E;
+            color: #b5b5b5;
+        }
+        p {
+            font-size: @base-font-size - 2;
+            line-height: 17px;
+            text-align: center;
+            width: 900px;
+            margin-left: -53px;
+            color: #fff;
+        }
+        .image {
+            margin: 0 0 10px;
+        }
+        .logo-bci {
+            text-align: right;
+        }
+        .terminos-cond {
+            float: right;
+            margin-bottom: -16px;
+            margin-top: 10px;
+            padding-right: 20px;
+            text-align: right;
+            a {
+               text-decoration: none; 
+            }
+        }
+        .politicas {
+            float: left;
+            margin-bottom: -16px;
+            margin-top: 10px;
+            padding-left: 10px;
+            text-align: left;
+            a {
+               text-decoration: none; 
+            }
+        }
+    }
+}
